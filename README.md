@@ -1,0 +1,1 @@
+These files are demonstrated examples of my coding knowledge and ability. This repository is regularly updated as I continue to complete the necessary coding and data analysis work to advance my career.
