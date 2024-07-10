@@ -1,0 +1,50 @@
+function golfScore (par,strokesfor){
+  let netscore = 0
+
+  let holeinone = 5
+  let threepoints = 3
+  let twopoints = 2
+  let onepoint = 1
+  let parforhole = 0
+
+  if(strokesfor == 1){
+    netscore -= holeinone
+    return 'Hole-in-one!'
+  }
+  else if(strokesfor+2 == par){
+    netscore -= twopoints
+    return 'Eagle'
+  }
+  else if(strokesfor+1 == par){
+    netscore -= onepoint
+    return 'Birdie'
+  }
+  if(strokesfor == par){
+    netscore -= parforhole
+    return 'Par'
+  }
+  if(strokesfor-1 == par){
+    netscore += onepoint
+    return 'Bogey'
+  }
+  if(strokesfor-2 == par){
+    netscore += twopoints
+    return 'Double Bogey'
+  }
+  if(strokesfor-3 <= par){
+    netscore -= threepoints
+    return 'Go Home!'
+  }
+  return netscore
+}
+
+
+
+
+// FREEZE CODE BEGIN
+try {
+  module.exports = golfScore;
+} catch (err) {
+  console.log('golfScore loaded');
+}
+// FREEZE CODE END
